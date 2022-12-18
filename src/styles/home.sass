@@ -1,7 +1,6 @@
 main
-  height: 100%
-  background-image: url("../images/background.jpg")
-  background-size: cover
+  width: 100%
+  box-sizing: border-box
 
 .home
   height: 100%
@@ -9,16 +8,25 @@ main
 .center_heading
   display: flex
   justify-content: center
-  padding-top: 50px
+  padding: 50px 0 50px
+  text-align: center
 
 .content
-  width: max(30%, 300px)
+  width: min(100%, 430px)
+  padding: 15px
+  box-sizing: border-box
   display: flex
   justify-content: space-between
   background-color: #000
 
 .link
   height: 100%
+  width: 80px
+
+  text-align: right
   display: flex
   flex-direction: column
   justify-content: end
+  a
+    padding: 10px 0 5px 20px
+    text-align: right

@@ -3,7 +3,7 @@ import '../styles/home.sass';
 
 function Home() {
     return (
-        <div  className={'home'}>
+        <div  className={'home background'}>
             <Header></Header>
             <main className={'padding'}>
                 <div>
@@ -26,7 +26,7 @@ function Home() {
                         </div>
                         <div className="shop_link">
                             <div className="link">
-                                <a href="">SHOP</a>
+                                <a href="/shop">SHOP</a>
                             </div>
                         </div>
                     </div>
