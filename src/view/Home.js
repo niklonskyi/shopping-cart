@@ -1,10 +1,11 @@
 import Header from "../components/Header";
 import '../styles/home.sass';
+import { TypeAnimation } from 'react-type-animation';
+import FullHeight from "react-full-height";
 
-function Home() {
+function Home(props) {
     return (
         <div  className={'home background'}>
-            <Header></Header>
             <main className={'padding'}>
                 <div>
                     <div className="center_heading">
@@ -12,22 +13,52 @@ function Home() {
                     </div>
                     <div className="content">
                         <div className="article">
-                            <h3>You have one new message! <br/>
-                                *BEEP*</h3>
+                            <TypeAnimation
+                                sequence={[
+                                    'You have one new message!',
+                                    1000,
+                                    'You have one new message! \n *BEEP*'
+                                ]}
+                                wrapper='h3'
+                                cursor={true}
+                                style={{whiteSpace: 'pre-line'}}
+                            />
                             <br/>
-                            <p>Oh, I see... <br/>
-                            You need <b><i>new equipment</i></b>, right? <br/>
-                            Check out our store. <br/>
-                            Hope you find something for your needs. <br/>
-                            </p>
+                            <TypeAnimation
+                                sequence={[
+                                    5000,
+                                    'Oh, I see.',
+                                    500,
+                                    'Oh, I see..',
+                                    500,
+                                    'Oh, I see...',
+                                    500,
+                                    'Oh, I see... \n You need new equipment, right?',
+                                    1000,
+                                    'Oh, I see... \n You need new equipment, right? \n Check out our store.',
+                                    1000,
+                                    'Oh, I see... \n You need new equipment, right? \n Check out our store. \n Hope you find something for your needs.'
+                                ]}
+                                wrapper='p'
+                                cursor={true}
+                                style={{whiteSpace: 'pre-line'}}
+                            />
                             <br/>
-                            <h3>... <br/>
-                                *CLICK*</h3>
-                        </div>
-                        <div className="shop_link">
-                            <div className="link">
-                                <a href="/shop">SHOP</a>
-                            </div>
+                            <TypeAnimation
+                            sequence={[
+                                19000,
+                                '...'
+                            ]}
+                            wrapper='h3'/>
+                            <br/>
+                            <a href="/shop" style={{width: '100px'}}>
+                                <TypeAnimation
+                                    sequence={[
+                                        20000,
+                                        '*CLICK*'
+                                    ]}
+                                    wrapper='h3'/>
+                            </a>
                         </div>
                     </div>
                 </div>
