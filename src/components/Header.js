@@ -1,6 +1,11 @@
 import '../styles/header.sass'
+import {useEffect, useState} from "react";
+import {Link} from "react-router-dom";
 
-function Header() {
+function Header(props) {
+
+    let cartCount = props.count;
+
     return (
         <header className={'header padding'}>
             <div className="logo">
@@ -9,15 +14,16 @@ function Header() {
             <div  className="navbar">
                 <nav>
                     <ol>
-                        <li className="nav_link"><a href="/">Home</a></li>
-                        <li className="nav_link"><a href="/shop">Shop</a></li>
-                        <li className="nav_link"><a href="#">About</a></li>
-                        <li className="nav_link"><a href="">Cart</a></li>
+                        <li className="nav_link"><Link to='.'>Home</Link></li>
+                        <li className="nav_link"><Link to="./shop">Shop</Link></li>
+                        <li className="nav_link"><Link to="./about">About</Link></li>
+                        <li className="nav_link"><a href="">Cart {props.cartCount}</a></li>
                     </ol>
                 </nav>
             </div>
         </header>
     )
+
 }
 
 export default Header;
